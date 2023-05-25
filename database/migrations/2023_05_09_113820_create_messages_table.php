@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->string("m_message", 256);
+            $table->integer("option")->default(0);
             $table->time("m_time");
             $table->integer("del_flg")->default(0);
             $table->timestamps();
